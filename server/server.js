@@ -6,7 +6,14 @@ const PORT = 3001;
 // API endpoint
 app.get('/api/data', (req, res) => {
   // Manually set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5501'); // Allow requests from the client
+  const allowedOrigins = [
+    'http://127.0.0.1:5501',
+    'https://razeem.github.io'
+  ];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.setHeader('Access-Control-Allow-Methods', 'GET'); // Allow GET requests
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow specific headers
 
