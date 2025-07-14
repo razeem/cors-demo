@@ -4,12 +4,14 @@ This project demonstrates Cross-Origin Resource Sharing (CORS) using a simple cl
 
 ## Project Structure
 
+```
 cors-demo/
 ├── client/
 │   ├── index.html
 │   └── script.js
 └── server/
     └── server.js
+```
 
 - **client/**: Contains the HTML and JavaScript files for the client application.
 - **server/**: Contains the Node.js server that serves the API.
